@@ -1,11 +1,16 @@
-let js = 'amazing';
-console.log(40 + 8 + 23 - 6);
+const heightJohn = 1.95;
+const massJohn = 92;
+const heightMark = 1.69;
+const massMark = 78;
 
-let firstName = 'Cjijioke';
-console.log(firstName);
+const johnBMI = massJohn / heightJohn ** 2;
 
-const now = 2022;
-const ageChiji = now - 1987;
-const ageGloria = now - 1994;
+const markBMI = massMark / heightMark ** 2;
 
-console.log(ageChiji - ageGloria);
+if (johnBMI != markBMI) {
+    if (johnBMI > markBMI) {
+        console.log("John has a higher BMI than Mark");
+    } else {
+        console.log("John has a lesser BMI than Mark")
+    }
+}
