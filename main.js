@@ -1,19 +1,19 @@
-// const heightJohn = 1.95;
-// const massJohn = 92;
-// const heightMark = 1.69;
-// const massMark = 78;
+const heightJohn = 1.95;
+const massJohn = 92;
+const heightMark = 1.69;
+const massMark = 78;
 
-// const johnBMI = massJohn / heightJohn ** 2;
+const johnBMI = massJohn / heightJohn ** 2;
 
-// const markBMI = massMark / heightMark ** 2;
+const markBMI = massMark / heightMark ** 2;
 
-// if (johnBMI != markBMI) {
-//     if (johnBMI > markBMI) {
-//         console.log("John has a higher BMI than Mark");
-//     } else {
-//         console.log("John has a lesser BMI than Mark")
-//     }
-// }
+if (johnBMI != markBMI) {
+    if (johnBMI > markBMI) {
+        console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
+    } else {
+        console.log(`John's BMI ${johnBMI} is lesser than Mark's ${markBMI}`);
+    }
+}
 // const firstName = 'Chiji';
 // const job = 'Teacher';
 // const birthYear = 1987;
