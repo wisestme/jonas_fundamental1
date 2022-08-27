@@ -14,11 +14,35 @@
 //         console.log("John has a lesser BMI than Mark")
 //     }
 // }
-const firstName = 'Chiji';
-const job = 'Teacher';
-const birthYear = 1987;
+// const firstName = 'Chiji';
+// const job = 'Teacher';
+// const birthYear = 1987;
+// const currentYear = 2022;
+
+// const chiji = `I'm ${firstName}, a ${currentYear - birthYear} year old JavaScript ${job}`;
+
+// console.log(chiji);
+
+const userDOB = 2004;
 const currentYear = 2022;
+const userAge = currentYear - userDOB;
 
-const chiji = `I'm ${firstName}, a ${currentYear - birthYear} year old JavaScript ${job}`;
+let isMinor;
+const minAge = 18;
 
-console.log(chiji);
+isMinor = userAge < minAge ? true : false;
+
+if (!isMinor) {
+    console.log('you are old enough to be a driver');
+} else {
+    const remainderAge = minAge - userAge;
+    if (remainderAge > 0) {
+        let pluralizer;
+        if (remainderAge > 1) {
+            pluralizer = 's';
+        } else {
+            pluralizer = '';
+        }
+        console.log(`you have ${remainderAge} year${pluralizer} left before you can drive`);
+    }
+}
