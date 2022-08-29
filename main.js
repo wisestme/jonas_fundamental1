@@ -68,10 +68,12 @@
 //     console.log(`Both teams lost`);
 // }
 
-const bill = 430;
+function calculateTip(bill) {
+    const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
 
-const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
+    const tip = (tipPercent / 100) * bill;
 
-const tip = (tipPercent / 100) * bill;
+    console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+}
 
-console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+calculateTip(430);
