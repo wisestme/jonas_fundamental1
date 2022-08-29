@@ -47,23 +47,31 @@
 //     }
 // }
 
-const averageScoreDolphins = (97 + 112 + 101) / 3;
-const averageScoreKoalas = (109 + 95 + 106) / 3;
+// const averageScoreDolphins = (97 + 112 + 101) / 3;
+// const averageScoreKoalas = (109 + 95 + 106) / 3;
 
-console.log(averageScoreDolphins, averageScoreKoalas);
+// console.log(averageScoreDolphins, averageScoreKoalas);
 
-const minWinningScore = 100;
+// const minWinningScore = 100;
 
-if (averageScoreDolphins > minWinningScore || averageScoreKoalas > averageScoreKoalas) {
-    if (averageScoreDolphins !== averageScoreKoalas) {
-        if (averageScoreDolphins > averageScoreKoalas) {
-            console.log(`Team Dolphins wins`);
-        } else {
-            console.log(`Team Koalas wins`);
-        }
-    } else {
-        console.log(`you all are winners`);
-    }
-} else {
-    console.log(`Both teams lost`);
-}
+// if (averageScoreDolphins > minWinningScore || averageScoreKoalas > averageScoreKoalas) {
+//     if (averageScoreDolphins !== averageScoreKoalas) {
+//         if (averageScoreDolphins > averageScoreKoalas) {
+//             console.log(`Team Dolphins wins`);
+//         } else {
+//             console.log(`Team Koalas wins`);
+//         }
+//     } else {
+//         console.log(`you all are winners`);
+//     }
+// } else {
+//     console.log(`Both teams lost`);
+// }
+
+const bill = 430;
+
+const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
+
+const tip = (tipPercent / 100) * bill;
+
+console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
