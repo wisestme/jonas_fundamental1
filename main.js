@@ -68,12 +68,31 @@
 //     console.log(`Both teams lost`);
 // }
 
-function calculateTip(bill) {
-    const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
+// function calculateTip(bill) {
+//     const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
 
-    const tip = (tipPercent / 100) * bill;
+//     const tip = (tipPercent / 100) * bill;
 
-    console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+//     console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+// }
+
+// calculateTip(430);
+
+const threeScoreAverage = (score1, score2, score3) => {
+    return (score1 + score2 + score3) / 3;
 }
 
-calculateTip(430);
+const dolphinsAverage = threeScoreAverage(85, 54, 41);
+const koalasAverage = threeScoreAverage(23, 34, 27);
+
+const checkWinner = (averageKoalas, averageDolphins) => {
+    if (averageKoalas > averageDolphins && averageDolphins > (2 * averageDolphins)) {
+        console.log(`Koalas won (${averageKoalas} vs. ${averageDolphins})`);
+    } else if (averageDolphins > averageKoalas && averageDolphins > (2 * averageKoalas)) {
+        console.log(`Dolphins won (${averageDolphins} vs. ${averageKoalas})`);
+    } else {
+        console.log(`No winner`);
+    }
+}
+
+checkWinner(koalasAverage, dolphinsAverage);
