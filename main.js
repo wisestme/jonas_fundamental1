@@ -78,21 +78,48 @@
 
 // calculateTip(430);
 
-const threeScoreAverage = (score1, score2, score3) => {
-    return (score1 + score2 + score3) / 3;
+// const threeScoreAverage = (score1, score2, score3) => {
+//     return (score1 + score2 + score3) / 3;
+// }
+
+// const dolphinsAverage = threeScoreAverage(85, 54, 41);
+// const koalasAverage = threeScoreAverage(23, 34, 27);
+
+// const checkWinner = (averageKoalas, averageDolphins) => {
+//     if (averageKoalas > averageDolphins && averageDolphins > (2 * averageDolphins)) {
+//         console.log(`Koalas won (${averageKoalas} vs. ${averageDolphins})`);
+//     } else if (averageDolphins > averageKoalas && averageDolphins > (2 * averageKoalas)) {
+//         console.log(`Dolphins won (${averageDolphins} vs. ${averageKoalas})`);
+//     } else {
+//         console.log(`No winner`);
+//     }
+// }
+
+// checkWinner(koalasAverage, dolphinsAverage);
+
+const bills = [125, 555, 44];
+const tips = [];
+const totals = [];
+
+function calculateTip(bill) {
+    const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
+
+    const tip = (tipPercent / 100) * bill;
+
+    const total = tip + bill;
+
+    tips.push(tip);
+    totals.push(total);
+
+    console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+
+    console.log(tips, totals);
+
 }
 
-const dolphinsAverage = threeScoreAverage(85, 54, 41);
-const koalasAverage = threeScoreAverage(23, 34, 27);
+calculateTip(bills[0]);
+calculateTip(bills[1]);
+calculateTip(bills[2]);
 
-const checkWinner = (averageKoalas, averageDolphins) => {
-    if (averageKoalas > averageDolphins && averageDolphins > (2 * averageDolphins)) {
-        console.log(`Koalas won (${averageKoalas} vs. ${averageDolphins})`);
-    } else if (averageDolphins > averageKoalas && averageDolphins > (2 * averageKoalas)) {
-        console.log(`Dolphins won (${averageDolphins} vs. ${averageKoalas})`);
-    } else {
-        console.log(`No winner`);
-    }
-}
 
-checkWinner(koalasAverage, dolphinsAverage);
+// tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
