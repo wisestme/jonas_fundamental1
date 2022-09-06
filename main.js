@@ -140,3 +140,5 @@ console.log(chiji);
 const interestedIn = prompt('What do you want to know about Chiji? age, job, firstname, friends?');
 
 console.log(chiji[interestedIn]);
+
+console.log(`${chiji.firstName} has ${chiji.friends.length} friends and the name of the best friend is ${chiji.friends[1]}`);
