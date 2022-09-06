@@ -132,3 +132,11 @@ const chiji = {
     friends: ['Marvellous', 'Gloria', 'Sherifat'],
     job: 'Web Developer'
 };
+
+chiji.location = 'Nigeria';
+
+console.log(chiji);
+
+const interestedIn = prompt('What do you want to know about Chiji? age, job, firstname, friends?');
+
+console.log(chiji[interestedIn]);
