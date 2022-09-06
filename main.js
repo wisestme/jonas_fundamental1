@@ -97,29 +97,38 @@
 
 // checkWinner(koalasAverage, dolphinsAverage);
 
-const bills = [125, 555, 44];
-const tips = [];
-const totals = [];
+// const bills = [125, 555, 44];
+// const tips = [];
+// const totals = [];
 
-function calculateTip(bill) {
-    const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
+// function calculateTip(bill) {
+//     const tipPercent = (bill > 50 && bill < 300) ? 15 : 20;
 
-    const tip = (tipPercent / 100) * bill;
+//     const tip = (tipPercent / 100) * bill;
 
-    const total = tip + bill;
+//     const total = tip + bill;
 
-    tips.push(tip);
-    totals.push(total);
+//     tips.push(tip);
+//     totals.push(total);
 
-    console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+//     console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
 
-    console.log(tips, totals);
+//     console.log(tips, totals);
 
-}
+// }
 
-calculateTip(bills[0]);
-calculateTip(bills[1]);
-calculateTip(bills[2]);
+// calculateTip(bills[0]);
+// calculateTip(bills[1]);
+// calculateTip(bills[2]);
 
 
 // tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
+
+const chiji = {
+    firstName: 'Chijioke',
+    lastName: 'Nwagwu',
+    employed: true,
+    age: 30,
+    friends: ['Marvellous', 'Gloria', 'Sherifat'],
+    job: 'Web Developer'
+};
