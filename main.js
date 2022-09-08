@@ -158,44 +158,57 @@
 // chiji.getSummary();
 // console.log(chiji.message);
 
-const mark = {
-    firstName: 'Mark',
-    lastName: 'Milan',
-    getFullname: function () {
-        this.fullname = this.firstName + " " + this.lastName;
-        return this.fullname;
-    },
-    mass: 78.92,
-    height: 1.6995,
-    calcBMI: function () {
-        this.markBMI = this.mass / this.height ** 2;
-        this.getFullname();
-        return this.markBMI;
-    }
-};
+// const mark = {
+//     firstName: 'Mark',
+//     lastName: 'Milan',
+//     getFullname: function () {
+//         this.fullname = this.firstName + " " + this.lastName;
+//         return this.fullname;
+//     },
+//     mass: 78.92,
+//     height: 1.6995,
+//     calcBMI: function () {
+//         this.markBMI = this.mass / this.height ** 2;
+//         this.getFullname();
+//         return this.markBMI;
+//     }
+// };
 
-const john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    getFullname: function () {
-        this.fullname = `${this.firstName} ${this.lastName}`;
-        return this.fullname;
-    },
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.johnBMI = this.mass / this.height ** 2;
-        this.getFullname();
-        return this.johnBMI;
-    }
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     getFullname: function () {
+//         this.fullname = `${this.firstName} ${this.lastName}`;
+//         return this.fullname;
+//     },
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.johnBMI = this.mass / this.height ** 2;
+//         this.getFullname();
+//         return this.johnBMI;
+//     }
+// }
+
+// // john.getFullname();
+// // mark.getFullname();
+// john.calcBMI();
+// mark.calcBMI();
+
+
+// john.johnBMI > mark.markBMI ?
+//     console.log(`${john.fullname}'s BMI (${john.johnBMI}) is higher than ${mark.fullname}'s BMI(${mark.markBMI})`) :
+//     console.log(`${mark.fullname}'s BMI (${mark.markBMI}) is higher than ${john.fullname}'s BMI(${john.johnBMI})`);
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`lifting weight ${rep}`);
 }
 
-// john.getFullname();
-// mark.getFullname();
-john.calcBMI();
-mark.calcBMI();
+const birthYears = [2007, 1991, 1969, 2020];
+const ages = [];
 
-
-john.johnBMI > mark.markBMI ?
-    console.log(`${john.fullname}'s BMI (${john.johnBMI}) is higher than ${mark.fullname}'s BMI(${mark.markBMI})`) :
-    console.log(`${mark.fullname}'s BMI (${mark.markBMI}) is higher than ${john.fullname}'s BMI(${john.johnBMI})`);
+for (let i = 0; i < birthYears.length; i++) {
+    age = 2022 - birthYears[i];
+    ages.push(age);
+}
+console.log(ages);
