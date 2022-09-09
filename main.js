@@ -238,13 +238,13 @@ for (let i = 0; i < bills.length; i++) {
 
 console.log(tips, totals);
 
-// let sum = 0;
-// function calcAverage(arr) {
-//     for (let i = 0; i < arr.length; i++) {
-//         sum = sum + arr[i];
-//     }
-//     console.log(sum / arr.length);
-// }
+let sum = 0;
+function calcAverage(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    console.log(sum / arr.length);
+}
 
-// calcAverage([1, 2, 3, 4]);
-// calcAverage(totals);
+calcAverage([1, 2, 3, 4]);
+calcAverage(totals);
