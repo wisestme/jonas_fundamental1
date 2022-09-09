@@ -200,15 +200,51 @@
 //     console.log(`${john.fullname}'s BMI (${john.johnBMI}) is higher than ${mark.fullname}'s BMI(${mark.markBMI})`) :
 //     console.log(`${mark.fullname}'s BMI (${mark.markBMI}) is higher than ${john.fullname}'s BMI(${john.johnBMI})`);
 
-for (let rep = 1; rep <= 10; rep++) {
-    console.log(`lifting weight ${rep}`);
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`lifting weight ${rep}`);
+// }
+
+// const birthYears = [2007, 1991, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < birthYears.length; i++) {
+//     age = 2022 - birthYears[i];
+//     ages.push(age);
+// }
+// console.log(ages);
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    function calculateTip() {
+        const tipPercent = (bills[i] > 50 && bills[i] < 300) ? 15 : 20;
+
+        const tip = (tipPercent / 100) * bills[i];
+
+        const total = tip + bills[i];
+
+        tips.push(tip);
+        totals.push(total);
+
+        // console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+
+
+    }
+    // console.log(tips, totals);
+    calculateTip();
 }
 
-const birthYears = [2007, 1991, 1969, 2020];
-const ages = [];
+console.log(tips, totals);
 
-for (let i = 0; i < birthYears.length; i++) {
-    age = 2022 - birthYears[i];
-    ages.push(age);
-}
-console.log(ages);
+// let sum = 0;
+// function calcAverage(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         sum = sum + arr[i];
+//     }
+//     console.log(sum / arr.length);
+// }
+
+// calcAverage([1, 2, 3, 4]);
+// calcAverage(totals);
