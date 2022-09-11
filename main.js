@@ -213,27 +213,52 @@
 // }
 // console.log(ages);
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
-for (let i = 0; i < bills.length; i++) {
-    function calculateTip() {
-        const tipPercent = (bills[i] > 50 && bills[i] < 300) ? 15 : 20;
+// for (let i = 0; i < bills.length; i++) {
+//     function calculateTip() {
+//         const tipPercent = (bills[i] > 50 && bills[i] < 300) ? 15 : 20;
 
-        const tip = (tipPercent / 100) * bills[i];
+//         const tip = (tipPercent / 100) * bills[i];
 
-        const total = tip + bills[i];
+//         const total = tip + bills[i];
 
-        tips.push(tip);
-        totals.push(total);
+//         tips.push(tip);
+//         totals.push(total);
 
-        // console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
+//         // console.log(`the bill value is ${bill}, the tip is ${tip} and the total value is ${bill + tip}`);
 
 
+//     }
+//     // console.log(tips, totals);
+//     calculateTip();
+// }
+
+// console.log(tips, totals);
+
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+const temperatureNumbers = [];
+
+function removeNonNumbers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'string') {
+            continue;
+        }
+        temperatureNumbers.push(arr[i]);
     }
-    // console.log(tips, totals);
-    calculateTip();
+    return temperatureNumbers;
+}
+removeNonNumbers(temperatures);
+console.log(temperatureNumbers);
+
+function getAmplitude() {
+    const lowestTemperature = Math.min(...temperatureNumbers);
+    const highestTemperature = Math.max(...temperatureNumbers);
+    return highestTemperature - lowestTemperature;
 }
 
-console.log(tips, totals);
+
+console.log(getAmplitude());
