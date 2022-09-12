@@ -238,27 +238,41 @@
 
 // console.log(tips, totals);
 
-const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
-const temperatureNumbers = [];
+// const temperatureNumbers = [];
 
-function removeNonNumbers(arr) {
+// function removeNonNumbers(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === 'string') {
+//             continue;
+//         }
+//         temperatureNumbers.push(arr[i]);
+//     }
+//     return temperatureNumbers;
+// }
+// removeNonNumbers(temperatures);
+// console.log(temperatureNumbers);
+
+// function getAmplitude() {
+//     const lowestTemperature = Math.min(...temperatureNumbers);
+//     const highestTemperature = Math.max(...temperatureNumbers);
+//     return highestTemperature - lowestTemperature;
+// }
+
+
+// console.log(getAmplitude());
+
+const forcastArray = [17, 21, 23];
+
+function forcastWeather(arr) {
+    let forcast = '';
+
     for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'string') {
-            continue;
-        }
-        temperatureNumbers.push(arr[i]);
+        forcast = `${forcast}...${arr[i]} in ${i + 1} days `;
     }
-    return temperatureNumbers;
-}
-removeNonNumbers(temperatures);
-console.log(temperatureNumbers);
+    console.log(forcast);
 
-function getAmplitude() {
-    const lowestTemperature = Math.min(...temperatureNumbers);
-    const highestTemperature = Math.max(...temperatureNumbers);
-    return highestTemperature - lowestTemperature;
 }
 
-
-console.log(getAmplitude());
+forcastWeather(forcastArray);
