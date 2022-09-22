@@ -17,6 +17,11 @@ document.querySelector('.btn--roll').addEventListener('click', function () {
     setCurrentScore();
 });
 
+// change player turn
+document.querySelector('.btn--hold').addEventListener('click', function () {
+    switchCurrentPlayer();
+})
+
 
 function setDiceImageSource() {
     const diceNumber = Math.trunc(Math.random() * 6) + 1;
@@ -33,20 +38,32 @@ function displayDice() {
 const allPlayers = document.querySelectorAll('.player');
 let activePlayer;
 
-allPlayers.forEach((player, index) => {
-    // console.log(player.classList.contains('player--active'));
-    if (player.classList.contains('player--active')) {
-        activePlayer = `player--${index}`;
-    }
-});
+function updateDOM() {
+    allPlayers.forEach((player, index) => {
+        // console.log(player.classList.contains('player--active'));
+        if (player.classList.contains('player--active')) {
+            activePlayer = `player--${index}`;
+        }
+    });
 
-// Get current score element for active player
-console.log(activePlayer);
-let activePlayerDOM = document.querySelector(`.${activePlayer}`);
-let currentScoreDOM = activePlayerDOM.children[2].querySelector('.current-score');
+    // Get current score element for active player
+    console.log(activePlayer);
+    let activePlayerDOM = document.querySelector(`.${activePlayer}`);
+    let currentScoreDOM = activePlayerDOM.children[2].querySelector('.current-score');
+    return currentScoreDOM;
+}
+
 let currentScore = 0;
 
 function setCurrentScore() {
+    let currentScoreDOM = updateDOM();
     currentScore += setDiceImageSource();
     currentScoreDOM.textContent = currentScore;
+}
+
+// switch current player
+function switchCurrentPlayer() {
+    allPlayers.forEach(player => {
+        player.classList.toggle('player--active');
+    })
 }
