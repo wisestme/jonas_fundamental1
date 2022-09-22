@@ -13,7 +13,8 @@ diceElement.classList.add('hidden');
 // roll dice
 document.querySelector('.btn--roll').addEventListener('click', function () {
     setDiceImageSource();
-})
+    displayDice();
+});
 
 
 function setDiceImageSource() {
@@ -22,6 +23,9 @@ function setDiceImageSource() {
     diceElement.src = diceImageSource;
 }
 
+function displayDice() {
+    diceElement.classList.remove('hidden');
+}
 
 
 
