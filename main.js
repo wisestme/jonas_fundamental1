@@ -276,3 +276,20 @@ function forcastWeather(arr) {
 }
 
 forcastWeather(forcastArray);
+
+let age = 30;
+let oldAge = age;
+
+age = 25;
+console.log(age, oldAge);
+
+const me = {
+    name: 'Chijioke',
+    age: 37
+}
+
+const myFriend = Object.assign({}, me);
+
+myFriend.name = 'Marvellous';
+
+console.log(me.name, myFriend.name);
