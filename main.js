@@ -371,3 +371,6 @@ console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Nkwobi'];
 console.log(newMenu);
+
+const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(allMenu)
