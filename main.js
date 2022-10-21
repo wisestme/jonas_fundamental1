@@ -326,6 +326,8 @@ const restaurant = {
     }
 };
 
+
+// Array Destructuring
 let [first, , second] = restaurant.categories;
 console.log(first, second);
 
@@ -335,3 +337,12 @@ console.log(first, second);
 const [starterDish, mainDish] = restaurant.order(2, 1);
 
 console.log(starterDish, mainDish)
+
+// Object Destructuring
+const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+
+console.log(restaurantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+
+console.log(menu, starters);
