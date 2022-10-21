@@ -293,3 +293,45 @@ const myFriend = Object.assign({}, me);
 myFriend.name = 'Marvellous';
 
 console.log(me.name, myFriend.name);
+
+const arr = [2, 3, 4];
+
+const [a, b, c] = arr;
+
+console.log(a);
+
+const restaurant = {
+    name: 'Calabar Kitchen',
+    location: '18, Ogudu Road, Ojota, Lagos, Nigeria',
+    categories: ['Swallow', 'Soup', 'Sauce', 'Poridge'],
+    starterMenu: ['Okpa', 'Ugba', 'Abacha', 'Nkwobi'],
+    mainMenu: ['Oha', 'Okazie', 'Nsala', 'Groundnut'],
+    openingHours: {
+        thu: {
+            open: 12,
+            close: 22,
+        },
+        fri: {
+            open: 11,
+            close: 23,
+        },
+        sat: {
+            open: 0,
+            close: 24,
+        },
+    },
+
+    order: function (starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    }
+};
+
+let [first, , second] = restaurant.categories;
+console.log(first, second);
+
+[second, first] = [first, second]
+console.log(first, second);
+
+const [starterDish, mainDish] = restaurant.order(2, 1);
+
+console.log(starterDish, mainDish)
