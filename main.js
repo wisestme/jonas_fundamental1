@@ -361,3 +361,13 @@ console.log(menu, starters);
 const { fri: { open, close } } = hours;
 
 console.log(open, close);
+
+// SPREAD
+const myArr = [7, 8, 9];
+
+const newArr = [2, 3, ...myArr];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Nkwobi'];
+console.log(newMenu);
