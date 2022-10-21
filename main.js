@@ -323,9 +323,19 @@ const restaurant = {
 
     order: function (starterIndex, mainIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+        console.log(`${this.starterMenu[starterIndex]} ${this.mainMenu[mainIndex]} ${address} ${time}`);
     }
 };
 
+restaurant.orderDelivery({
+    time: '22:30',
+    address: 'Isheri Magodo',
+    mainIndex: 2,
+    starterIndex: 2,
+})
 
 // Array Destructuring
 let [first, , second] = restaurant.categories;
@@ -346,3 +356,8 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 
 console.log(menu, starters);
+
+// Nested objects
+const { fri: { open, close } } = hours;
+
+console.log(open, close);
