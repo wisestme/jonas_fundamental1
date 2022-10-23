@@ -327,8 +327,23 @@ const restaurant = {
 
     orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
         console.log(`${this.starterMenu[starterIndex]} ${this.mainMenu[mainIndex]} ${address} ${time}`);
-    }
+    },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here is your delicious pasta made with ${ing1}, ${ing2}, and ${ing3}`)
+    },
+
+    // orderPizza: function (mainIngredient, ...otherIngredients) {
+    //     console.log(mainIngredient);
+    //     console.log(otherIngredients);
+    // },
 };
+
+restaurant.orderPizza('meat', 'onions', 'suya')
+
+const ingredients = [prompt(`let's make pasta ingredient 1?`), prompt('ingredient 2?'), prompt('ingredient 3?')];
+
+// restaurant.orderPasta(...ingredients);
 
 restaurant.orderDelivery({
     time: '22:30',
