@@ -300,6 +300,8 @@ const [a, b, c] = arr;
 
 console.log(a);
 
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
 const restaurant = {
     name: 'Calabar Kitchen',
     location: '18, Ogudu Road, Ojota, Lagos, Nigeria',
@@ -333,17 +335,36 @@ const restaurant = {
         console.log(`Here is your delicious pasta made with ${ing1}, ${ing2}, and ${ing3}`)
     },
 
-    orderPizza: function (mainIngredient, ...otherIngredients) {
+    orderPizza(mainIngredient, ...otherIngredients) {
         console.log(mainIngredient);
         console.log(otherIngredients);
     },
 };
 
-restaurant.orderPizza('meat', 'onions', 'suya')
+for (const day of Object.keys(restaurant.openingHours)) {
+    console.log(day);
+}
 
-const ingredients = [prompt(`let's make pasta ingredient 1?`), prompt('ingredient 2?'), prompt('ingredient 3?')];
+for (const open of Object.values(restaurant.openingHours)) {
+    console.log(`we open at ${open.open} and close at ${open.close}`);
+}
 
-restaurant.orderPasta(...ingredients);
+for (const [key, { open, close }] of Object.entries(restaurant.openingHours)) {
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+for (const day of days) {
+    const open = restaurant.openingHours[day]?.open ?? 'closed';
+    console.log(`on ${day} we open at ${open}`);
+}
+
+restaurant.orderPizza('meat', 'onions', 'suya');
+
+// const ingredients = [prompt(`let's make pasta ingredient 1?`), prompt('ingredient 2?'), prompt('ingredient 3?')];
+
+// restaurant.orderPasta(...ingredients);
 
 restaurant.orderDelivery({
     time: '22:30',
@@ -388,4 +409,9 @@ const newMenu = [...restaurant.mainMenu, 'Nkwobi'];
 console.log(newMenu);
 
 const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(allMenu)
+console.log(allMenu);
+
+for (const item of allMenu) console.log(item);
+
+for (const [i, el] of allMenu.entries()) console.log(`${i + 1}: ${el}`);
+
