@@ -415,3 +415,33 @@ for (const item of allMenu) console.log(item);
 
 for (const [i, el] of allMenu.entries()) console.log(`${i + 1}: ${el}`);
 
+const rest = new Map();
+rest.set('name', 'Wisest Kitchen');
+rest.set(1, 'Isheri, Magodo');
+rest.set(2, 'Oregun, Ikeja');
+
+console.log(rest);
+
+rest.set('categories', ['Swallow', 'Soup', 'Sauce', 'Poridge'])
+    .set('open', 11)
+    .set('close', 23)
+    .set(true, 'We are open')
+    .set(false, 'We are closed');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+
+rest.delete(2);
+// rest.clear();
+const latestArr = [1, 2];
+rest.set(latestArr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
+
+console.log(rest.size);
+console.log(rest.get(latestArr));
