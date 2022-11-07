@@ -44,6 +44,7 @@ console.log(main, secondary)
 
 const nested = [2, 4, [5, 6]];
 
-const [a, b, [c, d]] = nested;
+const [a, b, [c = 1, d = 1, e = 1]] = nested;
 
-console.log(d);
+console.log(d, e);
+
