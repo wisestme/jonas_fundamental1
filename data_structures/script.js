@@ -52,10 +52,6 @@ const { name, openingHours, categories } = restaurant;
 
 console.log(openingHours)
 
-const { thu: thursday, fri, sat, mon = [] } = openingHours;
+const { thu: thursday, fri: { open, close }, sat, mon = [] } = openingHours;
 
-console.log(thursday, mon)
-
-const obj = { a: 23, b: 7, c: 15 };
-({ a, b } = obj);
-console.log(a, b)
+console.log(open, close);
