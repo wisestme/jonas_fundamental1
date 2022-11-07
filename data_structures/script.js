@@ -44,7 +44,7 @@ console.log(main, secondary)
 
 const nested = [2, 4, [5, 6]];
 
-const [a, b, [c = 1, d = 1, e = 1]] = nested;
+let [a, b, [c = 1, d = 1, e = 1]] = nested;
 
 console.log(d, e);
 
@@ -55,3 +55,7 @@ console.log(openingHours)
 const { thu: thursday, fri, sat, mon = [] } = openingHours;
 
 console.log(thursday, mon)
+
+const obj = { a: 23, b: 7, c: 15 };
+({ a, b } = obj);
+console.log(a, b)
