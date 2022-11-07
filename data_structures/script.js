@@ -48,3 +48,10 @@ const [a, b, [c = 1, d = 1, e = 1]] = nested;
 
 console.log(d, e);
 
+const { name, openingHours, categories } = restaurant;
+
+console.log(openingHours)
+
+const { thu: thursday, fri, sat, mon = [] } = openingHours;
+
+console.log(thursday, mon)
