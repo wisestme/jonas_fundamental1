@@ -29,7 +29,6 @@ const restaurant = {
 };
 
 
-const arr = [2, 3, 4];
+const [first, second] = restaurant.categories;
 
-const [a, b, c] = arr;
-console.log(b);
+console.log(first, second);
