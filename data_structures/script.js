@@ -29,6 +29,6 @@ const restaurant = {
 };
 
 
-const [first, second] = restaurant.categories;
+const [first, , third] = restaurant.categories;
 
-console.log(first, second);
+console.log(first, third);
