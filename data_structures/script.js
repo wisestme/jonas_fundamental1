@@ -68,9 +68,5 @@ const { thu: thursday, fri: { open, close }, sat, mon = [] } = openingHours;
 
 console.log(open, close);
 
-const arr = [2, 8, 9];
-
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-const newArr = [1, 2, ...arr];
-console.log(badNewArr);
-console.log(newArr);
+const newMenu = [...restaurant.mainMenu, 'Kulikuli'];
+console.log(newMenu);
