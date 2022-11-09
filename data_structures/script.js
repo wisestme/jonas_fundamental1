@@ -80,4 +80,12 @@ console.log(allMenu);
 
 // const ingredients = [prompt(`Let's make pasta \n Ingredient1`), prompt(`Ingredient 2`), prompt(`Ingredient 3`)];
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
+
+const newRestaurant = {
+  foundedIn: 1987,
+  ...restaurant,
+  founder: 'Wisestme'
+}
+
+console.log(newRestaurant);
