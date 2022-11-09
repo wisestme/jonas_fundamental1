@@ -33,6 +33,9 @@ const restaurant = {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
+  },
+  orderPasta(ing1, ing2, ing3) {
+    console.log(`let's make pasta with ${ing1}, ${ing2} and ${ing3}`);
   }
 };
 
@@ -70,3 +73,11 @@ console.log(open, close);
 
 const newMenu = [...restaurant.mainMenu, 'Kulikuli'];
 console.log(newMenu);
+
+const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+console.log(allMenu);
+
+const ingredients = [prompt(`Let's make pasta \n Ingredient1`), prompt(`Ingredient 2`), prompt(`Ingredient 3`)];
+
+restaurant.orderPasta(...ingredients);
