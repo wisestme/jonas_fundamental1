@@ -78,6 +78,6 @@ const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
 console.log(allMenu);
 
-const ingredients = [prompt(`Let's make pasta \n Ingredient1`), prompt(`Ingredient 2`), prompt(`Ingredient 3`)];
+// const ingredients = [prompt(`Let's make pasta \n Ingredient1`), prompt(`Ingredient 2`), prompt(`Ingredient 3`)];
 
 restaurant.orderPasta(...ingredients);
