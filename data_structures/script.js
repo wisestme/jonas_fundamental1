@@ -36,6 +36,10 @@ const restaurant = {
   },
   orderPasta(ing1, ing2, ing3) {
     console.log(`let's make pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
+  orderPizza(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
   }
 };
 
@@ -107,3 +111,5 @@ const add = function (...numbers) {
 
 add(2, 3);
 add(2, 3, 4);
+
+restaurant.orderPizza('asun', 'suya', 'mushroom');
