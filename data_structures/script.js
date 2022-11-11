@@ -67,7 +67,7 @@ const { name, openingHours, categories } = restaurant;
 
 console.log(openingHours)
 
-const { thu: thursday, fri: { open, close }, sat, mon = [] } = openingHours;
+let { thu: thursday, fri: { open, close }, sat, mon = [] } = openingHours;
 
 console.log(open, close);
 
@@ -89,3 +89,10 @@ const newRestaurant = {
 }
 
 console.log(newRestaurant);
+
+const [x, y, ...others] = [1, 2, 3, 4, 5];
+console.log(x, y, others);
+
+let { sat: weekend, ...weekdays } = restaurant.openingHours;
+
+console.log(weekdays);
